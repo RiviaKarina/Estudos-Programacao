@@ -6,14 +6,44 @@
     <title>Formulários</title>
 </head>
 <body>
-    <h1>Formulários</h1>
+    <h1>Formulários</h1><a href="index.html">Voltar para pagina inicial</a><hr>
 
-    <form>
-        <label for="campo_nome">Nome:</label>
-        <input id="campo_nome" type="text" placeholder="Digite seu nome aqui"><br><br>
-    </form>
+    <form> 
+        <label for="campo_nome">Nome:</label> <!--type text para campos de texto-->
+        <input id="campo_nome" type="text" placeholder="Digite seu nome aqui" required><br><br>
+        <label for="campo_email">E-mail:</label> <!--type email para campos de e-mail-->
+        <input id="campo_email" type="email" placeholder="Digite seu e-mail aqui" required><br><br>
+        <label for="campo_senha">Senha:</label><!--type password para campos de senhas-->
+        <input id="campo_senha" type="password" placeholder="Digite sua senha aqui" required><br>
+
+        <h4>Escolha seu gênero:</h4>
+        <input type="radio" id="boy" name="genero" value="masculino" required><label >Masculino</label><br>
+        <input type="radio" id="girl" name="genero" value="feminino"><label >Feminino</label><br><!--type radio para opções de escolha única-->
+
+        <h4>Escolha suas linguagens de programação favoritas:</h4>
+        <input type="checkbox" id="python" name="linguagem" value="python"><label>Python</label><br>
+        <input type="checkbox" id="javascript" name="linguagem" value="javascript"><label>JavaScript</label><br>
+        <input type="checkbox" id="java" name="linguagem" value="java"><label>Java</label><br>
+        <input type="checkbox" id="csharp" name="linguagem" value="csharp"><label>C#</label><br>
+        <input type="checkbox" id="cpp" name="linguagem" value="cpp"><label>C++</label><br><!--type checkbox para opções de escolha múltipla-->
 
 
-   <hr> <a href="index.html">Voltar para o início</a>
+
+        <h4>Escolha um sistema:</h4>
+        <select name="sistemas">
+            <option disabled value="">Selecione um sistema</option>
+            <option value="linux">Linux</option>
+            <option value="windows">Windows</option>
+            <option value="macos">macOS</option> </select> <!--select para criar uma caixa de seleção, option para criar as opções dentro da caixa de seleção--> <br>
+
+        <h4>Digite sua mensagem:</h4>
+        <textarea required name="mensagem" placeholder="Digite aqui sua mensagem" rows="10" cols="30"></textarea><!--textarea para criar uma caixa de texto maior, rows para definir o número de linhas, cols para definir o número de colunas--><br>
+
+
+        <input type="submit" value="Enviar"><!--type submit para criar um botão de envio-->
+        <button type="reset">Limpar</button><!--type reset para criar um botão de limpeza dos campos do formulário-->
+
+    </form> <!--form para criação de formulários-->
+
 </body>
 </html>
